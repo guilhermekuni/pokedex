@@ -32,6 +32,8 @@
     "react/jsx-one-expression-per-line": "off",
     "react/no-unescaped-entities": "off",
     "camelcase": "off",
+    "react/forbid-prop-types": "off",
+    "no-return-await": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

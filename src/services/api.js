@@ -1,0 +1,11 @@
+import axios from 'axios';
+
+import { API_URL, API_VERSION } from '../config/env';
+
+const api = axios.create({
+  baseURL: `${API_URL}/${API_VERSION}/`,
+});
+
+export const getPokemon = async ({ id }) => {
+  return await api.get(`pokemon/${id}`);
+};
