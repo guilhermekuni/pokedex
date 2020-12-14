@@ -7,27 +7,27 @@ const PokemonStats = ({ hp, attack, defense, spAttack, spDefense, speed }) => {
   return (
     <S.StatsSectionWrapper>
       <p>
-        <strong>Health: </strong>
+        <strong>health: </strong>
         {hp}
       </p>
       <p>
-        <strong>Attack: </strong>
+        <strong>attack: </strong>
         {attack}
       </p>
       <p>
-        <strong>Defense: </strong>
+        <strong>defense: </strong>
         {defense}
       </p>
       <p>
-        <strong>Sp. Attack: </strong>
+        <strong>sp. attack: </strong>
         {spAttack}
       </p>
       <p>
-        <strong>Sp. Defense: </strong>
+        <strong>sp. defense: </strong>
         {spDefense}
       </p>
       <p>
-        <strong>Speed: </strong>
+        <strong>speed: </strong>
         {speed}
       </p>
     </S.StatsSectionWrapper>

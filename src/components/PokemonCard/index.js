@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import PokemonTypeIcon from '../PokemonTypeIcon';
 import PokemonStats from './PokemonStats';
 
 import * as S from './styles';
@@ -18,6 +19,10 @@ const PokemonCard = ({ id, name, sprite, stats, types }) => {
       <S.PokemonName>{name}</S.PokemonName>
       <S.PokemonNumber>#{formattedId}</S.PokemonNumber>
       <S.PokemonSprite src={sprite} />
+      <S.TypeSection>
+        <PokemonTypeIcon type={firstType} />
+        {secondType && <PokemonTypeIcon type={secondType} />}
+      </S.TypeSection>
       <S.InfoSection>
         <PokemonStats
           hp={hp.base_stat}
