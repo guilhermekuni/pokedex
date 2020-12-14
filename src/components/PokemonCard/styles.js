@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
+import { darken } from 'polished';
 
 const getSecondTypeGradientColor = (theme, firstType, secondType) =>
-  secondType ? theme.typeBg[secondType] : theme.typeBg[firstType];
+  secondType ? theme.typeBg[secondType] : darken(0.3, theme.typeBg[firstType]);
 
 export const CardWrapper = styled.div`
   ${({ theme, firstType, secondType }) => css`
