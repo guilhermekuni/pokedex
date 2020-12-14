@@ -1,35 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import SkillBar from './SkillBar';
+
 import * as S from './styles';
 
 const PokemonStats = ({ hp, attack, defense, spAttack, spDefense, speed }) => {
   return (
     <S.StatsSectionWrapper>
-      <p>
+      <S.Column alignment="flex-end">
         <strong>health: </strong>
-        {hp}
-      </p>
-      <p>
         <strong>attack: </strong>
-        {attack}
-      </p>
-      <p>
         <strong>defense: </strong>
-        {defense}
-      </p>
-      <p>
         <strong>sp. attack: </strong>
-        {spAttack}
-      </p>
-      <p>
         <strong>sp. defense: </strong>
-        {spDefense}
-      </p>
-      <p>
         <strong>speed: </strong>
-        {speed}
-      </p>
+      </S.Column>
+      <S.Column flex={2}>
+        <SkillBar skill={hp} />
+        <SkillBar skill={attack} />
+        <SkillBar skill={defense} />
+        <SkillBar skill={spAttack} />
+        <SkillBar skill={spDefense} />
+        <SkillBar skill={speed} />
+      </S.Column>
     </S.StatsSectionWrapper>
   );
 };

@@ -6,7 +6,7 @@ const getSecondTypeGradientColor = (theme, firstType, secondType) =>
 
 export const CardWrapper = styled.div`
   ${({ theme, firstType, secondType }) => css`
-    height: 800px;
+    height: 850px;
     width: 100%;
     max-width: 1200px;
     display: flex;
