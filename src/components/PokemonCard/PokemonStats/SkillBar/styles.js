@@ -24,7 +24,7 @@ export const Skill = styled.div`
   ${({ theme, percent }) => css`
     height: 100%;
     width: ${percent}%;
-    background: red;
+    background: ${theme.colors.secondary};
     border-radius: ${theme.border.radius};
   `}
 `;

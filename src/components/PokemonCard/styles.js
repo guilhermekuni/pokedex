@@ -16,7 +16,7 @@ export const CardWrapper = styled.div`
     border-radius: ${theme.border.radius};
     margin: ${theme.spacing.xxsmall};
     padding: ${theme.spacing.xsmall};
-    box-shadow: 6px 6px 14px 0.2px;
+    box-shadow: 6px 6px 14px 0.2px ${theme.colors.black};
     background: linear-gradient(
       to bottom right,
       ${theme.typeBg[firstType]},
