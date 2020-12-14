@@ -5,7 +5,8 @@ import * as S from './styles';
 const PokemonCard = () => {
   return (
     <S.CardWrapper>
-      <h1>POKEMON CARD</h1>
+      <S.PokemonName>Charizard</S.PokemonName>
+      <S.PokemonNumber>#006</S.PokemonNumber>
     </S.CardWrapper>
   );
 };
