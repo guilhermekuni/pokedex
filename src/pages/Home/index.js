@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     const handleGetPokemon = async () => {
-      const response = await getPokemon({ id: 88 });
+      const response = await getPokemon({ id: 3 });
       const { id, name, sprites, stats, types } = response.data;
       const { front_default } = sprites.other['official-artwork'];
 
