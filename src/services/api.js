@@ -6,6 +6,6 @@ const api = axios.create({
   baseURL: `${API_URL}/${API_VERSION}/`,
 });
 
-export const getPokemon = async ({ id }) => {
-  return await api.get(`pokemon/${id}`);
+export const getPokemon = async filter => {
+  return await api.get(`pokemon/${filter}`);
 };

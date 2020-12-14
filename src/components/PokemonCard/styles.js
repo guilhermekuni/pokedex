@@ -6,9 +6,9 @@ const getSecondTypeGradientColor = (theme, firstType, secondType) =>
 
 export const CardWrapper = styled.div`
   ${({ theme, firstType, secondType }) => css`
-    height: 850px;
     width: 100%;
     max-width: 1200px;
+    max-height: 850px;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -16,7 +16,7 @@ export const CardWrapper = styled.div`
     border-radius: ${theme.border.radius};
     margin: ${theme.spacing.xxsmall};
     padding: ${theme.spacing.xsmall};
-    box-shadow: 6px 6px 14px 0.2px ${theme.colors.black};
+    box-shadow: 4px 4px 14px 0.2px ${theme.colors.gray};
     background: linear-gradient(
       to bottom right,
       ${theme.typeBg[firstType]},
