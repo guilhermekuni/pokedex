@@ -10,6 +10,9 @@ export const SearchBarWrapper = styled.form`
     border-radius: ${theme.border.radius};
     padding: ${theme.spacing.xxsmall} ${theme.spacing.small};
     box-shadow: 4px 4px 14px 0.2px ${theme.colors.black};
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   `};
 `;
 

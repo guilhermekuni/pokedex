@@ -18,7 +18,9 @@ const PokemonCard = ({ id, name, sprite, stats, types }) => {
     <S.CardWrapper firstType={firstType} secondType={secondType}>
       <S.PokemonName>{name}</S.PokemonName>
       <S.PokemonNumber>#{formattedId}</S.PokemonNumber>
-      <S.PokemonSprite src={sprite} />
+      <S.MainSection>
+        <S.PokemonSprite src={sprite} />
+      </S.MainSection>
       <S.TypeSection>
         <PokemonTypeIcon type={firstType} />
         {secondType && <PokemonTypeIcon type={secondType} />}

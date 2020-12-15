@@ -15,7 +15,7 @@ export const CardWrapper = styled.div`
     align-items: center;
     border-radius: ${theme.border.radius};
     margin: ${theme.spacing.xxsmall};
-    padding: ${theme.spacing.xsmall};
+    padding: ${theme.spacing.xxsmall};
     box-shadow: 4px 4px 14px 0.2px ${theme.colors.black};
     background: linear-gradient(
       to bottom right,
@@ -30,6 +30,7 @@ export const PokemonName = styled.h1`
     font-weight: ${theme.font.bold};
     font-size: ${theme.font.sizes.xxlarge};
     color: ${theme.colors.white};
+    text-transform: uppercase;
   `};
 `;
 
@@ -38,18 +39,25 @@ export const PokemonNumber = styled.h2`
     font-weight: ${theme.font.light};
     font-size: ${theme.font.sizes.medium};
     color: ${theme.colors.white};
-    margin-top: ${theme.spacing.xxsmall};
+  `};
+`;
+
+export const MainSection = styled.section`
+  ${({ theme }) => css`
+    min-height: 300px;
+    max-height: 400px;
+    width: 100%;
+    margin: ${theme.spacing.xxsmall};
+    display: flex;
+    justify-content: center;
   `};
 `;
 
 export const PokemonSprite = styled.img.attrs({
   alt: 'Pokemon Sprite',
 })`
-  ${({ theme }) => css`
-    min-height: 300px;
-    max-height: 350px;
-    margin: ${theme.spacing.xxsmall};
-  `};
+  min-height: 300px;
+  max-height: 350px;
 `;
 
 export const InfoSection = styled.section`
