@@ -9,7 +9,7 @@ export const SearchBarWrapper = styled.form`
     margin: ${theme.spacing.xxsmall} 0;
     border-radius: ${theme.border.radius};
     padding: ${theme.spacing.xxsmall} ${theme.spacing.small};
-    box-shadow: 4px 4px 14px 0.2px ${theme.colors.gray};
+    box-shadow: 4px 4px 14px 0.2px ${theme.colors.black};
   `};
 `;
 

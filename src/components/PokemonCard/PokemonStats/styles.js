@@ -12,7 +12,7 @@ export const StatsSectionWrapper = styled.section`
     margin: ${theme.spacing.xxsmall};
     justify-content: center;
     align-items: center;
-    opacity: 0.5;
+    opacity: 0.75;
 
     strong {
       font-size: ${theme.font.sizes.xxsmall};

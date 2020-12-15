@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 export const Container = styled.div`
   ${({ theme }) => css`
@@ -8,6 +9,13 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     padding: 0 ${theme.spacing.xxxlarge};
-    background: ${theme.colors.white};
+
+    ${media.lessThan('large')`
+      padding: 0 ${theme.spacing.medium};
+    `}
+
+    ${media.lessThan('small')`
+      padding: 0;
+    `}
   `}
 `;

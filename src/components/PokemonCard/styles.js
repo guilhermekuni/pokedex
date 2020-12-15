@@ -8,7 +8,7 @@ export const CardWrapper = styled.div`
   ${({ theme, firstType, secondType }) => css`
     width: 100%;
     max-width: 1200px;
-    max-height: 850px;
+    max-height: 800px;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -16,7 +16,7 @@ export const CardWrapper = styled.div`
     border-radius: ${theme.border.radius};
     margin: ${theme.spacing.xxsmall};
     padding: ${theme.spacing.xsmall};
-    box-shadow: 4px 4px 14px 0.2px ${theme.colors.gray};
+    box-shadow: 4px 4px 14px 0.2px ${theme.colors.black};
     background: linear-gradient(
       to bottom right,
       ${theme.typeBg[firstType]},

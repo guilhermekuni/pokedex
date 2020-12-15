@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 export default createGlobalStyle`
   * {
@@ -8,8 +8,10 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: #EAEAEA;
-    -webkit-font-smoothing: antialiased
+    ${({ theme }) => css`
+      background: ${theme.colors.darkGray};
+      -webkit-font-smoothing: antialiased;
+    `};
   }
   body, input, button {
     font: 16px "Roboto", sans-serif;
