@@ -44,20 +44,39 @@ export const PokemonNumber = styled.h2`
 
 export const MainSection = styled.section`
   ${({ theme }) => css`
-    min-height: 300px;
-    max-height: 400px;
+    height: 300px;
     width: 100%;
     margin: ${theme.spacing.xxsmall};
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+  `};
+`;
+
+export const MainBgText = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: ${theme.spacing.xxlarge};
+    align-items: flex-end;
+    opacity: 0.5;
+
+    p {
+      font-weight: ${theme.font.bold};
+      font-size: ${theme.font.sizes.uuularge};
+      color: ${theme.colors.white};
+      text-transform: uppercase;
+    }
   `};
 `;
 
 export const PokemonSprite = styled.img.attrs({
   alt: 'Pokemon Sprite',
 })`
-  min-height: 300px;
-  max-height: 350px;
+  height: 320px;
+  position: absolute;
 `;
 
 export const InfoSection = styled.section`

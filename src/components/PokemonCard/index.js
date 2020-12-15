@@ -7,7 +7,7 @@ import PokemonStats from './PokemonStats';
 import * as S from './styles';
 
 const PokemonCard = ({ id, name, sprite, stats, types }) => {
-  const formattedId = id.toString().padStart(3, '0');
+  const formattedId = `#${id.toString().padStart(3, '0')}`;
 
   const firstType = types[0].type.name;
   const secondType = types[1]?.type?.name || null;
@@ -17,8 +17,12 @@ const PokemonCard = ({ id, name, sprite, stats, types }) => {
   return (
     <S.CardWrapper firstType={firstType} secondType={secondType}>
       <S.PokemonName>{name}</S.PokemonName>
-      <S.PokemonNumber>#{formattedId}</S.PokemonNumber>
+      <S.PokemonNumber>{formattedId}</S.PokemonNumber>
       <S.MainSection>
+        <S.MainBgText>
+          <p>{firstType}</p>
+          <p>{secondType}</p>
+        </S.MainBgText>
         <S.PokemonSprite src={sprite} />
       </S.MainSection>
       <S.TypeSection>
