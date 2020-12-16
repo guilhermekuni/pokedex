@@ -66,14 +66,24 @@ export const MainBgText = styled.div`
     flex: 1;
     margin-right: ${theme.spacing.xxlarge};
     align-items: flex-end;
-    opacity: 0.15;
+    opacity: 0.2;
 
     p {
       font-weight: ${theme.font.bold};
       font-size: ${theme.font.sizes.uuularge};
       color: ${theme.colors.white};
+      font-family: 'Abril Fatface';
       text-transform: uppercase;
-      animation: fadeIn ease 6s;
+      animation: fadeIn ease 3s;
+    }
+
+    span {
+      font-weight: ${theme.font.bold};
+      font-size: ${theme.font.sizes.large};
+      color: ${theme.colors.white};
+      font-family: 'Abril Fatface';
+      text-transform: uppercase;
+      animation: fadeIn ease 3.5s;
     }
 
     ${media.lessThan('medium')`
@@ -104,7 +114,7 @@ export const PokemonSprite = styled.img.attrs({
 })`
   height: 320px;
   position: absolute;
-  animation: fadeIn ease 2s;
+  animation: fadeIn ease 1s;
 `;
 
 export const InfoSection = styled.section`
