@@ -19,7 +19,7 @@ Esse projeto é uma interface Web que consome a API [PokéAPI](https://pokeapi.c
 
 **Projeto publicado no netfly:** [https://kuni-pokedex.netlify.app/](https://kuni-pokedex.netlify.app/)
 
-<img src="preview.gif" alt="preview" />
+<img src="preview.gif" alt="preview_pokedex" />
 
 ## Tecnologias :computer:
 
