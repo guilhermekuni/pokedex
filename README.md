@@ -2,9 +2,9 @@
 
 <div align="center">
   <p align="center">
-    <img alt="Repository languages count" src="https://img.shields.io/github/languages/top/guilhermekuni/pokedex?color=%#FF0000">
-    <img alt="Repository size" src="https://img.shields.io/github/repo-size/guilhermekuni/pokedex?color=%#3B4CCA">
-    <img alt="Repository last commit" src="https://img.shields.io/github/last-commit/guilhermekuni/pokedex?color=%#FFDE00" />
+    <img alt="Repository languages count" src="https://img.shields.io/github/languages/top/guilhermekuni/pokedex?color=red">
+    <img alt="Repository size" src="https://img.shields.io/github/repo-size/guilhermekuni/pokedex?color=blue">
+    <img alt="Repository last commit" src="https://img.shields.io/github/last-commit/guilhermekuni/pokedex?color=yellow" />
   </p>
   <p align="center">
     <a href="#sobre-information_source">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -19,7 +19,7 @@ Esse projeto é uma interface Web que consome a API [PokéAPI](https://pokeapi.c
 
 **Projeto publicado no netfly:** [https://kuni-pokedex.netlify.app/](https://kuni-pokedex.netlify.app/)
 
-<img src="src/assets/preview.gif" alt="preview" />
+<img src="preview.gif" alt="preview" />
 
 ## Tecnologias :computer:
 
