@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
+import LoadingContext from '../../contexts/loading';
+
+import Loading from '../Loading';
 import PokemonTypeIcon from '../PokemonTypeIcon';
 import PokemonStats from './PokemonStats';
 
 import * as S from './styles';
 
 const PokemonCard = ({ id, name, sprite, stats, types }) => {
+  const [loading] = useContext(LoadingContext);
+
   const formattedId = `#${id.toString().padStart(3, '0')}`;
 
   const firstType = types[0].type.name;
@@ -19,11 +24,18 @@ const PokemonCard = ({ id, name, sprite, stats, types }) => {
       <S.PokemonName>{name}</S.PokemonName>
       <S.PokemonNumber>{formattedId}</S.PokemonNumber>
       <S.MainSection>
-        <S.MainBgText>
-          <p>{firstType}</p>
-          <p>{secondType}</p>
-        </S.MainBgText>
-        <S.PokemonSprite src={sprite} />
+        {loading ? (
+          <Loading />
+        ) : (
+          <>
+            <S.MainBgText>
+              {!secondType && <p>&nbsp;</p>}
+              <p>{firstType}</p>
+              <p>{secondType}</p>
+            </S.MainBgText>
+            <S.PokemonSprite src={sprite} />
+          </>
+        )}
       </S.MainSection>
       <S.TypeSection>
         <PokemonTypeIcon type={firstType} />

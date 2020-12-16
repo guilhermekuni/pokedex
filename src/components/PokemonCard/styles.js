@@ -61,13 +61,14 @@ export const MainBgText = styled.div`
     flex: 1;
     margin-right: ${theme.spacing.xxlarge};
     align-items: flex-end;
-    opacity: 0.5;
+    opacity: 0.15;
 
     p {
       font-weight: ${theme.font.bold};
       font-size: ${theme.font.sizes.uuularge};
       color: ${theme.colors.white};
       text-transform: uppercase;
+      animation: fadeIn ease 6s;
     }
   `};
 `;
@@ -77,6 +78,7 @@ export const PokemonSprite = styled.img.attrs({
 })`
   height: 320px;
   position: absolute;
+  animation: fadeIn ease 2s;
 `;
 
 export const InfoSection = styled.section`
