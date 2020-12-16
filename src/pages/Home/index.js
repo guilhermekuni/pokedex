@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useCallback, useContext } from 'react';
 
 import { getPokemon } from '../../services/api';
 
@@ -13,30 +13,33 @@ const Home = () => {
   const [, setLoading] = useContext(LoadingContext);
   const [currentPokemon, setCurrentPokemon] = useState(null);
 
-  const handleGetPokemon = async (filter = 1) => {
-    setLoading(true);
+  const handleGetPokemon = useCallback(
+    async (filter = 1) => {
+      setLoading(true);
 
-    const formattedFilter = filter.toString().toLowerCase();
-    const response = await getPokemon(formattedFilter);
+      const formattedFilter = filter.toString().toLowerCase();
+      const response = await getPokemon(formattedFilter);
 
-    const { id, name, sprites, stats, types } = response.data;
-    const { front_default } = sprites.other['official-artwork'];
+      const { id, name, sprites, stats, types } = response.data;
+      const { front_default } = sprites.other['official-artwork'];
 
-    const pokemon = {
-      id,
-      name,
-      sprite: front_default,
-      stats,
-      types,
-    };
+      const pokemon = {
+        id,
+        name,
+        sprite: front_default,
+        stats,
+        types,
+      };
 
-    setCurrentPokemon(pokemon);
-    setTimeout(() => setLoading(false), [500]);
-  };
+      setCurrentPokemon(pokemon);
+      setTimeout(() => setLoading(false), [500]);
+    },
+    [setLoading],
+  );
 
   useEffect(() => {
     handleGetPokemon();
-  }, []);
+  }, [handleGetPokemon]);
 
   return (
     <S.Container>
