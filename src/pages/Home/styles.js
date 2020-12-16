@@ -14,7 +14,7 @@ export const Container = styled.div`
       padding: 0 ${theme.spacing.medium};
     `}
 
-    ${media.lessThan('small')`
+    ${media.lessThan('medium')`
       padding: 0;
     `}
   `}

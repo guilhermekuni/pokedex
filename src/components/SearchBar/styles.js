@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 export const SearchBarWrapper = styled.form`
   ${({ theme }) => css`
@@ -13,13 +14,17 @@ export const SearchBarWrapper = styled.form`
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    ${media.lessThan('small')`
+      border-radius: 0;
+    `}
   `};
 `;
 
 export const SearchBar = styled.input`
   ${({ theme }) => css`
     color: ${theme.colors.black};
-    font-size: ${theme.font.sizes.small};
+    font-size: ${theme.font.sizes.xsmall};
     background: transparent;
     border: 0;
     width: 100%;

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { darken } from 'polished';
+import media from 'styled-media-query';
 
 const getSecondTypeGradientColor = (theme, firstType, secondType) =>
   secondType ? theme.typeBg[secondType] : darken(0.3, theme.typeBg[firstType]);
@@ -22,6 +23,10 @@ export const CardWrapper = styled.div`
       ${theme.typeBg[firstType]},
       ${getSecondTypeGradientColor(theme, firstType, secondType)}
     );
+
+    ${media.lessThan('small')`
+      border-radius: 0;
+    `}
   `}
 `;
 
@@ -70,6 +75,27 @@ export const MainBgText = styled.div`
       text-transform: uppercase;
       animation: fadeIn ease 6s;
     }
+
+    ${media.lessThan('medium')`
+        margin-right: 0;
+
+      p {
+        font-size: ${theme.font.sizes.uularge};
+      }
+    `}
+
+    ${media.lessThan('small')`
+      margin-right: 0;
+      align-items: center;
+      margin-top: ${theme.spacing.xxxlarge};
+
+      p {
+        margin-top: ${theme.spacing.xxxsmall};
+        font-size: ${theme.font.sizes.ularge};
+      }
+
+      display: none;
+    `}
   `};
 `;
 

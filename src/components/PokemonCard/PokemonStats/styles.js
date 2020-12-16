@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 export const StatsSectionWrapper = styled.section`
   ${({ theme }) => css`
@@ -23,6 +24,16 @@ export const StatsSectionWrapper = styled.section`
       font-size: ${theme.font.sizes.xxsmall};
       line-height: ${theme.font.sizes.medium};
     }
+
+    ${media.lessThan('medium')`
+      padding: 0;
+      margin: 0;
+
+      p {
+        font-size: ${theme.font.sizes.xxxsmall};
+        line-height: ${theme.font.sizes.xxxsmall};
+      }
+    `}
   `}
 `;
 
@@ -33,5 +44,9 @@ export const Column = styled.div`
     flex: ${flex || 1};
     align-items: ${alignment};
     margin: 0 ${theme.spacing.xsmall};
+
+    ${media.lessThan('medium')`
+    margin: 0 ${theme.spacing.xxsmall};
+    `}
   `};
 `;
