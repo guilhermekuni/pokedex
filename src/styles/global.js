@@ -21,11 +21,13 @@ export default createGlobalStyle`
   }
 
   @keyframes fadeIn {
-  0% {
-    opacity:0;
+    0% {
+      opacity:0;
+      margin-right: 200px;
+    }
+    100% {
+      opacity: 1;
+      margin-right: 0;
+    };
   }
-  100% {
-    opacity: 1;
-  }
-}
 `;

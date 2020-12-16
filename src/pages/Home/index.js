@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useContext } from 'react';
 
-import { getPokemon } from '../../services/api';
+import { getPokemon, getPokemonSpecies } from '../../services/api';
 
 import LoadingContext from '../../contexts/loading';
 
@@ -23,10 +23,14 @@ const Home = () => {
       const { id, name, sprites, stats, types } = response.data;
       const { front_default } = sprites.other['official-artwork'];
 
+      const pokemonSpecies = await getPokemonSpecies(id);
+      const { names } = pokemonSpecies.data;
+
       const pokemon = {
         id,
         name,
         sprite: front_default,
+        japaneseName: names[0].name,
         stats,
         types,
       };

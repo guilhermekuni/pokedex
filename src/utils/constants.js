@@ -1,1 +1,1 @@
-export const MAX_STAT = 300;
+export const MAX_STAT = 255;

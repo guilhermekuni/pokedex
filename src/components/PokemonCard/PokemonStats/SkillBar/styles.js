@@ -22,9 +22,25 @@ export const Bar = styled.div`
 
 export const Skill = styled.div`
   ${({ theme, percent }) => css`
+    @keyframes loadSkill {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 1;
+      }
+    }
+
     height: 100%;
     width: ${percent}%;
     background: ${theme.colors.secondary};
     border-radius: ${theme.border.radius};
+    animation: loadSkill ease 1.5s;
+
+    ${percent !== 100 &&
+    css`
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    `};
   `}
 `;

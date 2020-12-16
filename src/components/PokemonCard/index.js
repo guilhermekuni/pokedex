@@ -9,7 +9,7 @@ import PokemonStats from './PokemonStats';
 
 import * as S from './styles';
 
-const PokemonCard = ({ id, name, sprite, stats, types }) => {
+const PokemonCard = ({ id, name, japaneseName, sprite, stats, types }) => {
   const [loading] = useContext(LoadingContext);
 
   const formattedId = `#${id.toString().padStart(3, '0')}`;
@@ -30,6 +30,7 @@ const PokemonCard = ({ id, name, sprite, stats, types }) => {
           <>
             <S.MainBgText>
               {!secondType && <p>&nbsp;</p>}
+              <span>{japaneseName}</span>
               <p>{firstType}</p>
               <p>{secondType}</p>
             </S.MainBgText>
@@ -75,6 +76,7 @@ const type = PropTypes.shape({
 PokemonCard.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
+  japaneseName: PropTypes.string.isRequired,
   sprite: PropTypes.string.isRequired,
   stats: PropTypes.arrayOf(stat).isRequired,
   types: PropTypes.arrayOf(type).isRequired,
