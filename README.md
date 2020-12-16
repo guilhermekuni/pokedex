@@ -17,6 +17,8 @@
 
 Esse projeto é uma interface Web que consome a API [PokéAPI](https://pokeapi.co/). Basicamente é uma PokéDex, onde você pode consultar pokémons pelo nome ou ID.
 
+<img src="preview_pokedex.gif" alt="preview" />
+
 **Projeto publicado no netfly:** [https://kuni-pokedex.netlify.app/](https://kuni-pokedex.netlify.app/)
 
 ## Tecnologias :computer:
