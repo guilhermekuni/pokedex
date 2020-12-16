@@ -10,10 +10,10 @@ const PokemonStats = ({ hp, attack, defense, spAttack, spDefense, speed }) => {
     <S.StatsSectionWrapper>
       <S.Column alignment="flex-end">
         <strong>health: </strong>
-        <strong>attack: </strong>
-        <strong>defense: </strong>
-        <strong>sp. attack: </strong>
-        <strong>sp. defense: </strong>
+        <strong>atk: </strong>
+        <strong>def: </strong>
+        <strong>sp. atk: </strong>
+        <strong>sp. def: </strong>
         <strong>speed: </strong>
       </S.Column>
       <S.Column flex={2}>
